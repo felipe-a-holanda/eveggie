@@ -2,7 +2,7 @@
 
 {% block content %}
  {% for restaurant in object_list %}
-<img src="{{ restaurant.picture.url }}" height="200">
+<img src="{% if restaurant.picture %}{{ restaurant.picture.url }}{%endif%}" height="200">
   <p>
     <h4>{{ restaurant.name }}</h4>
 
