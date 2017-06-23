@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1><a href="{% url 'restaurants:detail' restaurant.slug %}">{{restaurant}}</a></h1>
+<h2>{{restaurant.address}}</h2>
+{% for review in object_list %}
+
+<table>
+  <tr>
+    <td>Usuario</td>
+    <td>{{review.user}}</td>
+  </tr>
+  <tr>
+    <td>Comentario</td>
+    <td>{{review.comment}}</td>
+  </tr>
+  <tr>
+    <td>Qualidade:</td>
+    <td>{{review.quality}}</td>
+    <td>Preço:</td>
+    <td>{{review.price}}</td>
+    <td>Pontualidade:</td>
+    <td>{{review.punctuality}}</td>
+    <td>Serviço:</td>
+    <td>{{review.service}}</td>
+  </tr>
+
+</table>
+<br>
+{% endfor %}
+{% endblock content %}

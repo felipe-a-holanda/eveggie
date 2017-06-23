@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+ {% for restaurant in object_list %}
+  <p>
+    <h4>{{ restaurant.name }}</h4>
+
+
+<ul>
+  <li>{{ restaurant.cuisine }}</a></li>
+  <li>Endereço: {{ restaurant.address }}</li>
+  <li>Nota: {{ restaurant.votes }}</li>
+
+  <h5><a href="{% url 'restaurants:detail' slug=restaurant.slug %}">Cardápio</a></h5>
+</ul>
+
+  </p>
+  {% endfor %}
+{% endblock content %}

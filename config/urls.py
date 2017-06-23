@@ -14,6 +14,9 @@ urlpatterns = [
 
     # User management
     url(r'^users/', include('eveggie.users.urls', namespace='users')),
+    url(r'^restaurants/', include('restaurants.urls', namespace='restaurants')),
+    url(r'^reviews/', include('reviews.urls', namespace='reviews')),
+    url(r'^orders/', include('orders.urls', namespace='orders')),
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here

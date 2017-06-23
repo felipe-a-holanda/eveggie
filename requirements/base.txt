@@ -36,6 +36,8 @@ psycopg2==2.7.1
 
 # Unicode slugification
 awesome-slugify==1.6.5
+django-autoslug==1.9.3
+
 
 # Time zones support
 pytz==2017.2

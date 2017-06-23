@@ -55,6 +55,9 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     # custom users app
     'eveggie.users.apps.UsersConfig',
+    'eveggie.restaurants.apps.RestaurantsConfig',
+    'eveggie.orders.apps.OrdersConfig',
+    'eveggie.reviews.apps.ReviewsConfig',
     # Your stuff: custom apps go here
 ]
 

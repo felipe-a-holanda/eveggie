@@ -32,6 +32,11 @@ EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND',
                     default='django.core.mail.backends.console.EmailBackend')
 
 
+DATABASES = {
+    'default': env.db('DATABASE_URL', default='sqlite:/eveggie.sqlite'),
+}
+
+
 # CACHING
 # ------------------------------------------------------------------------------
 CACHES = {
