@@ -2,12 +2,13 @@
 
 {% block content %}
  {% for restaurant in object_list %}
+<img src="{{ restaurant.picture.url }}" height="200">
   <p>
     <h4>{{ restaurant.name }}</h4>
 
 
 <ul>
-  <li>{{ restaurant.cuisine }}</a></li>
+
   <li>Endereço: {{ restaurant.address }}</li>
   <li>Nota: {{ restaurant.votes }}</li>
 
