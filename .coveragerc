@@ -1,0 +1,5 @@
+[run]
+include = eveggie/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
