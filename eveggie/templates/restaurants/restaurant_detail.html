@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<img src="{% if restaurant.picture %}{{ restaurant.picture.url }}{%endif%}" height="300">
 <h1>{{ object.name }}</h1>
 Nota: <h2>{{ object.votes }}</h2>
 Comentários: <a href="{% url 'reviews:list' object.slug %}">{{ object.reviews.count }}</a>
